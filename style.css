@@ -1,0 +1,273 @@
+/* GENERAL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/image (11).jpeg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* WELCOME SECTION */
+
+.hero {
+    min-height: 75vh;
+    padding: 80px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-heading {
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #c46b8b;
+}
+
+h1 {
+    font-size: clamp(38px, 7vw, 64px);
+    margin: 15px 0;
+    color: #b64d76;
+}
+
+.subtitle {
+    font-size: 17px;
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+
+/* BUTTONS */
+
+.cute-button {
+    background: #e985a8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 25px;
+    margin: 15px 0;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #e985a844;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cute-button:hover {
+    background: #d95f8c;
+    transform: translateY(-3px);
+}
+
+.cute-button:focus-visible {
+    outline: 3px solid #a63e67;
+    outline-offset: 4px;
+}
+
+
+/* LOVE LETTER */
+
+.letter {
+    max-width: 550px;
+    margin: 25px auto 0;
+    padding: 25px;
+    background: #ffffffd9;
+    border: 1px solid #f5c5d6;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #b64d7618;
+    line-height: 1.8;
+    animation: appear 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* GALLERY SECTION */
+
+.gallery-section {
+    padding: 60px 20px;
+}
+
+.gallery-section h2,
+.surprise-section h2 {
+    font-size: 30px;
+    color: #b64d76;
+}
+
+.section-description {
+    margin-bottom: 35px;
+}
+
+
+/* FLEXBOX: ARRANGE THE PHOTO CARDS */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* INDIVIDUAL PHOTO CARDS */
+
+.photo-card {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    width: 290px;
+    max-width: 100%;
+    box-shadow: 0 8px 25px #b64d7618;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 15px 30px #b64d762c;
+}
+
+.memory-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.memory-photo:focus-visible {
+    outline: 3px solid #b64d76;
+    outline-offset: 4px;
+}
+
+.photo-card h3 {
+    color: #b64d76;
+}
+
+.photo-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.hint {
+    color: #bd6687;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+
+/* SURPRISE SECTION */
+
+.surprise-section {
+    padding: 65px 20px;
+    background: #fff7fa;
+    margin-top: 40px;
+}
+
+.surprise-message {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background: #ffe4ec;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    animation: appear 0.5s ease;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    color: #bd6687;
+    font-size: 14px;
+}
+
+
+/* FLOATING HEARTS */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.heart {
+    position: absolute;
+    bottom: -40px;
+    animation: floatUp 5s linear forwards;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 65vh;
+        padding: 55px 18px;
+    }
+
+    .gallery-section h2,
+    .surprise-section h2 {
+        font-size: 25px;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-card {
+        width: min(100%, 340px);
+    }
+
+    .letter {
+        padding: 20px;
+    }
+}

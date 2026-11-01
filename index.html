@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little World Made for You 💗</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect the JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Floating hearts will appear here -->
+    <div class="hearts" aria-hidden="true"></div>
+
+    <!-- Main welcome section -->
+    <header class="hero">
+        <p class="small-heading">A LITTLE SOMETHING FOR YOU ✨</p>
+
+        <h1>Hey, Beautiful! 💗</h1>
+
+        <p class="subtitle">
+            I made a tiny corner of the internet just for you.
+        </p>
+
+        <button id="letterButton" class="cute-button">
+            Open Your Little Letter 💌
+        </button>
+
+        <!-- Hidden letter -->
+        <div id="letter" class="letter hidden">
+            <h2>Dear My Favorite Person 🌷</h2>
+
+            <p>
+                If I could save my favorite moments in one place,
+                I would put them all here. Every picture has a little
+                memory, and every memory reminds me how special you are.
+                This little website is just one more way to make you smile.
+            </p>
+
+            <p>Made with lots of love, just for you. 💕</p>
+        </div>
+    </header>
+
+    <!-- Photo gallery -->
+    <main>
+
+        <section class="gallery-section">
+            <h2>My Favorite Little Moments 📸</h2>
+
+            <p class="section-description">
+                Every picture has a story. Tap one and see what happens!
+            </p>
+
+            <div class="gallery">
+
+                <div class="photo-card">
+                    <img src="images/image (15).jpeg"
+                         alt="A favorite memory"
+                         class="memory-photo"
+                         data-photo="0">
+
+                    <h3>Little Moments 🌸</h3>
+                    <p>The moments that make me smile.</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/image (9).jpeg"
+                         alt="Another favorite memory"
+                         class="memory-photo"
+                         data-photo="1">
+
+                    <h3>Pretty Memories 🦋</h3>
+                    <p>A little memory worth keeping.</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/image (8).jpeg"
+                         alt="A special memory"
+                         class="memory-photo"
+                         data-photo="2">
+
+                    <h3>My Favorite View 💗</h3>
+                    <p>Some things deserve their own little gallery.</p>
+                </div>
+
+            </div>
+
+            <p class="hint">Psst... try clicking the pictures! 👀</p>
+        </section>
+
+        <!-- Surprise section -->
+        <section class="surprise-section">
+            <h2>One Last Little Surprise 🎀</h2>
+
+            <p>There's one more thing I want you to know...</p>
+
+            <button id="surpriseButton" class="cute-button">
+                Click for a Surprise ✨
+            </button>
+
+            <p id="surpriseMessage" class="surprise-message hidden">
+                Out of all the little things in this world,
+                I'm really glad our paths crossed. 💖
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ♡, just for you.</p>
+    </footer>
+
+</body>
+</html>
